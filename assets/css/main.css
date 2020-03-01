@@ -1,0 +1,159 @@
+@import url('reset.import.css');
+:root {
+  font-size: 13.3333vw;
+  --max-width: 100vw;
+}
+@media (min-width: 420px) {
+  :root {
+    font-size: 56px;
+  }
+}
+@font-face {
+  font-family: 'Christmas';
+  src: url('../fonts/MiraculousChristmas.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'MFJunYa';
+  src: url('../fonts/MFJunYa.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'MFShangYa';
+  src: url('../fonts/MFShangYa.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'HYRunYuan';
+  src: url('../fonts/HYRunYuan.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+html,body {height: 100%;;}
+body {
+  background-color: #fff;color:#03081A;
+  background-image: url(../images/bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+  font-size: 16px;
+  padding-left: 5vw;
+}
+h1 {
+  padding:30px 0 0 0;
+  font-size: 20px;
+  text-transform: uppercase;letter-spacing: 5px;
+  font-weight: 700;
+  color: #878b99;
+}
+h1::before {
+  content: '';
+  width: 30px;height: 30px;
+  margin-right: 4px;
+  background-image: url(../images/logo.jpg);
+  background-size: cover;
+  display: inline-block;
+  vertical-align: middle;
+}
+h1 span{
+  font-size: 0;letter-spacing: 0;margin: 0 5px 0 2px;
+  display: inline-block;
+  vertical-align: middle;
+}
+h1 span::before {
+  content: '';background-color: #ED3A3A;font-size: 40px;
+  width: 8px;height: 8px;
+  display: inline-block;
+  border-radius: 8px;
+}
+h1 sup {display: block;font-style: normal;line-height: 1.2;text-transform: uppercase;font-size: 12px;}
+article {margin: 6vw 0 0;}
+article p {
+  font-size: 48px;color: #878b99;font-weight: 300;letter-spacing: 6px;
+}
+.cite {margin:40px 0;letter-spacing: 0;}
+.cite-name {
+  font-family: "MFJunYa";
+  font-style: normal;
+  font-size: 3.2vw;
+  color: #ED3A3A;
+  display: inline-block;
+}
+.title-line {
+  display: flex;
+  align-items: center;
+}
+.title-line .line {
+  flex:1;
+}
+.title-line .line::before,
+.title-line .line::after {
+  content: '';
+  display: block;
+  background-color: #ED3A3A;
+}
+.title-line .line::before {height: 6px;}
+.title-line .line::after {height: 3px;margin: 5px 0 0;}
+.title-line .star {
+  width: 2.4vw;
+  height: 2.4vw;
+  margin: 0 20px;
+  background-image: url(../images/star.svg);
+  background-size: cover;
+}
+.cite-mean {
+  display: block;
+  font-family: "MFShangYa";
+  font-size: 4.22vw;
+  color: #383838;
+}
+.btn-submit {
+  display: block;
+  font-family: "MFShangYa";
+  width: 20vw;
+  border: 8px solid #ED3A3A;
+  font-size: 2vw;
+  line-height: 3.6vw;
+  text-align: center;
+  color: #000;
+}
+.action {margin: 40px 0 0;}
+@media (orientation : portrait) {
+  body {background-image: url(../images/bg-mobile.png);background-position: 100% 100%;background-size: 100% auto;}
+  h1 {font-size: 16px;}
+  h1 span::before {width: 5px;height: 5px;}
+  article {margin: 12vw 0 0;}
+  article p {font-size: 6vw;}
+  .cite {margin: 8vw 0;}
+  .cite-name {font-size: 5.6vw;}
+  .cite-mean {font-size: 7.4vw;margin:2vw 0 0;}
+  .title-line .star {
+    width: 8vw;
+    height: 8vw;
+    margin: 0 2.6vw;
+  }
+  .title-line .line::before {height: 4px;}
+  .title-line .line::after {height: 2px;margin: 3px 0 0;}
+  .btn-submit {width: 60%;border-width: 4px;font-size: 5vw;line-height: 10vw;}
+}
+@media only screen and (-webkit-min-device-pixel-ratio:2){
+  .mod-list::before,
+  .author-info::after,
+  .special-list::before {
+    transform: scaleY(.5);
+    transform-origin: 0 0;
+  }
+  .author-info::after {
+    transform-origin: 0 100%;
+  }
+}
+@media only screen and (-webkit-min-device-pixel-ratio:3){
+  .mod-list::before,
+  .author-info::after,
+  .special-list::before {
+    transform: scaleY(.3333);
+  }
+}
