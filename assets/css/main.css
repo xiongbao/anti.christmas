@@ -120,6 +120,10 @@ article p {
   text-align: center;
   color: #000;
 }
+.btn-submit.liked {
+  border-color: #cdcdce;
+  color: #9a9a9e;
+}
 .action {margin: 40px 0 0;}
 @media (orientation : portrait) {
   body {background-image: url(../images/bg-mobile.png);background-position: 100% 100%;background-size: 100% auto;}

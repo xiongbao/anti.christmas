@@ -29,8 +29,35 @@
     <span class="cite-mean">并没有明确规定不能过洋节</span>
   </p>
   <p>但，意思我们都懂。<br>来吧，让我们一起：</p>
-  <p class="action"><a href="javascript:;" class="btn-submit">抵 制 洋 节</a></p>
+  <p class="action"><button class="btn-submit" id="btn">抵 制 洋 节</button></p>
 </article>
-
+<script>
+  var btn = document.getElementById('btn');
+  var like = localStorage.getItem('like') || 0;
+  if(like) {
+    btn.className += ' liked'
+    btn.innerText = '您 已 抵 制'
+  }
+  btn.onclick = function(){
+    localStorage.setItem('like',1)
+    this.className += ' liked'
+    this.innerText = '您 已 抵 制'
+  }
+  var iframe = document.createElement('iframe');
+  iframe.id='audio';
+  iframe.style.display='none';
+  iframe.allow = 'autoplay'
+  iframe.src='https://audio.server.run/anti.christmas/bg.mp3';
+  if (iframe.attachEvent){
+    iframe.attachEvent("onload", function(){
+      console.log('Load Success.')
+    });
+  } else {
+    iframe.onload = function(){
+      console.log('Load Success.')
+    };
+  }
+  document.body.appendChild(iframe);
+</script>
 </body>
 </html>
